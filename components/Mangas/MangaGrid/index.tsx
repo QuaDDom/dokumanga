@@ -3,14 +3,18 @@ import React, { useEffect, useState } from 'react';
 import MangaCard from '../MangaCard';
 import styles from './index.module.scss';
 
-export default function MangaGrid() {
+interface Props {
+    url: string;
+}
+
+export default function MangaGrid({ url }: Props) {
     const [mangas, setMangas] = useState<any>([]);
     const [page, setPage] = useState(1);
 
     useEffect(() => {
         const getMangas = async () => {
             try {
-                const mangasRes = await axios.get('https://api.jikan.moe/v4/manga');
+                const mangasRes = await axios.get(url);
                 const mangasData = mangasRes.data;
                 setMangas([...mangasData.data]);
             } catch (err) {
@@ -23,8 +27,8 @@ export default function MangaGrid() {
     return (
         <div className={styles.mangas}>
             {mangas &&
-                mangas.map(({ title, images }) => (
-                    <MangaCard title={title} image={images.jpg.image_url} />
+                mangas.map(({ title, images, mal_id }) => (
+                    <MangaCard title={title} image={images.jpg.image_url} id={mal_id} />
                 ))}
         </div>
     );

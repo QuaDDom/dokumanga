@@ -1,0 +1,14 @@
+.mangaContainer {
+    width: 100%;
+    .intro {
+        width: 100%;
+        display: flex;
+
+        .image {
+            width: 20%;
+        }
+        .info {
+            width: 80%;
+        }
+    }
+}

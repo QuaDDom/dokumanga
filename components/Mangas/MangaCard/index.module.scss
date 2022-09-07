@@ -7,6 +7,7 @@
     justify-content: center;
     overflow: hidden;
     border-radius: 10px;
+    animation: appear 0.4s;
     &:hover .image {
         transform: scale(1.1);
     }
@@ -38,5 +39,16 @@
         bottom: 20px;
         left: 20px;
         width: 60%;
+    }
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
     }
 }

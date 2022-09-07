@@ -12,7 +12,7 @@ export default function Home() {
                 <Text size={35} weight="bold" className="title">
                     Popular Mangas
                 </Text>
-                <MangaGrid />
+                <MangaGrid url="https://api.jikan.moe/v4/manga" />
             </div>
         </Layout>
     );

@@ -1,9 +1,15 @@
 .nav {
     width: 100%;
-    padding: 3vh 15vw;
+    padding: 2vh 15vw;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    background: #00000000;
+    backdrop-filter: blur(10px);
     .logo {
         display: flex;
         align-items: center;
@@ -16,6 +22,9 @@
         .option {
             margin: 0 15px;
             font-size: 1.15em;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
         .profile {
             padding-left: 50px;
