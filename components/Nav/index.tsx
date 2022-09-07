@@ -6,8 +6,12 @@ export default function Nav() {
     return (
         <div className={styles.nav}>
             <div className={styles.logo}>
-                <Text size={35}>漫画</Text>
-                <Text size={30}>Dokumanga</Text>
+                <Text size={35} weight="bold">
+                    漫画
+                </Text>
+                <Text size={30} weight="bold">
+                    Dokumanga
+                </Text>
             </div>
             <div className={styles.options}>
                 <Link className={styles.option} href="/">

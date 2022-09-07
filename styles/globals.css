@@ -1,12 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap');
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Manrope', sans-serif !important;
 }
 
 .page {
     padding: 0 15vw;
-    padding-top: 7vh;
+    padding-top: 5vh;
     height: 100vh;
     width: 100%;
+}
+
+.title {
+    padding-bottom: 35px;
 }
