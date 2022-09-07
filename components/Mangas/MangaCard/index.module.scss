@@ -8,6 +8,8 @@
     overflow: hidden;
     border-radius: 10px;
     animation: appear 0.4s;
+    margin-right: 2vw;
+    margin-bottom: 35px;
     &:hover .image {
         transform: scale(1.1);
     }
