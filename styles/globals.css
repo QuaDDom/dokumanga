@@ -1,0 +1,12 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.page {
+    padding: 0 15vw;
+    padding-top: 7vh;
+    height: 100vh;
+    width: 100%;
+}

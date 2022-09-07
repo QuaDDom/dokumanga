@@ -1,0 +1,28 @@
+.nav {
+    width: 100%;
+    padding: 3vh 15vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .logo {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 240px;
+    }
+    .options {
+        display: flex;
+        align-items: center;
+        .option {
+            margin: 0 15px;
+            font-size: 1.1em;
+        }
+        .profile {
+            padding-left: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+        }
+    }
+}

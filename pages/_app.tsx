@@ -1,5 +1,74 @@
+import '../styles/app.module.scss';
+import { createTheme, NextUIProvider } from '@nextui-org/react';
+import { ThemeProvider as NextThemesProvider } from 'next-themes';
+import '../styles/globals.css';
+
+const darkTheme = createTheme({
+    type: 'dark',
+    theme: {
+        colors: {
+            background: '#121212',
+            primaryLight: '#fff',
+            primaryLightHover: '#fff',
+            primaryLightActive: '#fff',
+            primaryLightContrast: '#fff',
+            primary: '#ffffff',
+            primaryBorder: '#fff',
+            primaryBorderHover: '#fff',
+            primarySolidHover: '#ccc',
+            primarySolidContrast: '$white',
+            primaryShadow: '$blue500',
+            link: '#ccc',
+            linkHover: '#fff',
+            text: '#fff',
+            myDarkColor: '#ff4ecd',
+            grey: '#2a333e'
+        },
+        space: {},
+        fonts: {}
+    }
+});
+
+const lightTheme = createTheme({
+    type: 'light',
+    theme: {
+        colors: {
+            background: '#121212',
+            primaryLight: '#fff',
+            primaryLightHover: '#fff',
+            primaryLightActive: '#fff',
+            primaryLightContrast: '#fff',
+            primary: '#ffffff',
+            primaryBorder: '#fff',
+            primaryBorderHover: '#fff',
+            primarySolidHover: '#ccc',
+            primarySolidContrast: '$white',
+            primaryShadow: '$blue500',
+            link: '#ccc',
+            linkHover: '#fff',
+            text: '#fff',
+            myDarkColor: '#ff4ecd',
+            grey: '#2a333e'
+        },
+        space: {},
+        fonts: {}
+    }
+});
+
 function MyApp({ Component, pageProps }) {
-    return <Component {...pageProps} />;
+    return (
+        <NextThemesProvider
+            defaultTheme={darkTheme}
+            attribute="class"
+            value={{
+                light: lightTheme.className,
+                dark: darkTheme.className
+            }}>
+            <NextUIProvider>
+                <Component {...pageProps} />
+            </NextUIProvider>
+        </NextThemesProvider>
+    );
 }
 
 export default MyApp;
