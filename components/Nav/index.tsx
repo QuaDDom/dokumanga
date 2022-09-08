@@ -13,11 +13,11 @@ export default function Nav() {
     return (
         <div className={styles.nav}>
             <div className={styles.logo}>
-                <Text size={35} weight="bold">
-                    漫画
+                <Text size={35} weight="semibold">
+                    桜
                 </Text>
                 <Text size={30} weight="bold">
-                    Dokumanga
+                    Sakura
                 </Text>
             </div>
             <div className={styles.options}>
@@ -33,7 +33,7 @@ export default function Nav() {
                 <Switch
                     className={styles.option}
                     data-cursor-size="80px"
-                    color="primary"
+                    color={!isDark ? 'primary' : 'primary'}
                     checked={isDark}
                     iconOn={<BsMoonFill />}
                     iconOff={<BsSunFill />}

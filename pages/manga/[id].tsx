@@ -13,7 +13,7 @@ export default function Manga() {
     useEffect(() => {
         const getManga = async () => {
             try {
-                const mangaRes = await axios.get(`https://api.jikan.moe/v4/manga/${id}`);
+                const mangaRes = await axios.get(`https://api.jikan.moe/v4/anime/${id}`);
                 const mangaData = await mangaRes.data;
                 setManga(mangaData.data);
             } catch (err) {
@@ -44,7 +44,7 @@ export default function Manga() {
                                 Status: {manga.status}
                             </Text>
                             <Text size={22} weight="semibold">
-                                Chapters: {`${manga.chapters || 'In progress'}`}
+                                Episodes: {`${manga.chapters || 'In progress'}`}
                             </Text>
                             <Text size={18}>{manga.synopsis}</Text>
                         </div>

@@ -35,12 +35,13 @@ const lightTheme = createTheme({
     theme: {
         colors: {
             background: '#dddfec',
+            primary: '$black',
+            primaryHover: '#222',
             primaryLight: '#000',
             primaryLightHover: '#000000',
             primaryLightActive: '#000000',
             primaryLightContrast: '#000000',
-            primary: '#000',
-            secondary: '#ffffff',
+            secondary: '#000',
             primaryBorder: '#000000',
             primaryBorderHover: '#000000',
             primarySolidHover: '#151515',
@@ -50,7 +51,8 @@ const lightTheme = createTheme({
             linkHover: '#000000',
             text: '#000000',
             myDarkColor: '#ff4ecd',
-            grey: '#2a333e'
+            grey: '#2a333e',
+            accents2: '#000'
         }
     }
 });
